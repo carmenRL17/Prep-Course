@@ -36,7 +36,7 @@ function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-  var suma =x+y;
+  var r =x+y;
 
   return r;
 }
@@ -93,7 +93,7 @@ function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(mun<90){
+  if(num<90){
     return true;
   }else{
     return false;
@@ -147,14 +147,14 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  var resultCuadrado=Math.pow(mun,2);
+  var resultCuadrado=Math.pow(num,2);
   return resultCuadrado;
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  var resultCubo=Math.pow(mun,3);
+  var resultCubo=Math.pow(num,3);
   return resultCubo;
 }
 
@@ -195,11 +195,10 @@ function esPositivo(numero) {
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
   if(Math.sign(numero)== 1){
-    console.log("es positivo");
-
+    return "Es positivo";
   }if (Math.sign(numero) == -1){
-    console.log("es negativo");
-  }else if(Math.sign(numero)===0){
+    return "Es negativo";
+  }else {
     return false;
   }
   
@@ -224,7 +223,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  return `Hola ${nombre}`
+  return `Hola ${nombre}!`
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -271,12 +270,13 @@ function esVocal(letra){
   //Escribe tu código aquí
   let nuevaLetra=letra.toLowerCase();
 
-  if(nuevaLetra.length>1){
-    alert("Dato Incorrecto");
-  }else if(nuevaLetra=="a" || nuevaLetra=="e" || nuevaLetra=="i" || nuevaLetra=="o" || nuevaLetra=="u"){
-    alert("Es vocal");
+  if(nuevaLetra.length > 1){
+    return "Dato incorrecto";
+  }else if(nuevaLetra == "a" || nuevaLetra == "e" || nuevaLetra == "i" || nuevaLetra== "o" || nuevaLetra == "u"){
+    return "Es vocal"; 
+  }else{ 
+    return "Dato incorrecto";
   }
-
 }
 
 
